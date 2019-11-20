@@ -62,10 +62,18 @@ RCT_EXPORT_MODULE();
 {
     NSDictionary *userInfo = note.userInfo;
     NSString *url = userInfo[@"url"];
-    if ([TencentOAuth HandleOpenURL:[NSURL URLWithString:url]]) {
+    NSURL *rawURL = [NSURL URLWithString:url];
+    
+    if (!rawURL) {
+        return
     }
-    else {
-        [QQApiInterface handleOpenURL:[NSURL URLWithString:url] delegate:self];
+    
+    if ([TencentOAuth CanHandleUniversalLink:rawURL]) {
+        [TencentOAuth HandleUniversalLink:rawURL];
+    } else if ([TencentOAuth CanHandleOpenURL:rawURL]) {
+        [TencentOAuth HandleOpenURL:rawURL];
+    } else {
+        [QQApiInterface handleOpenUniversallink:url delegate:self];
     }
 }
 
