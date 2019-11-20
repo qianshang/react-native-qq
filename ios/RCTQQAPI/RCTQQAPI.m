@@ -8,7 +8,6 @@
 
 #import "RCTQQAPI.h"
 #import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 
@@ -73,7 +72,7 @@ RCT_EXPORT_MODULE();
     } else if ([TencentOAuth CanHandleOpenURL:rawURL]) {
         [TencentOAuth HandleOpenURL:rawURL];
     } else {
-        [QQApiInterface handleOpenUniversallink:url delegate:self];
+        [QQApiInterface handleOpenUniversallink:rawURL delegate:self];
     }
 }
 
