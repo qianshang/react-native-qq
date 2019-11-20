@@ -11,5 +11,5 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited)
 HEADER_SEARCH_PATHS = $(inherited) "${QQAPI_ROOT}/RCTQQAPI"
 LIBRARY_SEARCH_PATHS = $(inherited)
 OTHER_CFLAGS = $(inherited) -isystem "${QQAPI_ROOT}/RCTQQAPI/"
-OTHER_LDFLAGS = $(inherited) -ObjC -weak_library /usr/lib/libz.dylib -l"c++" -l"c++abi" -l"iconv" -l"sqlite3" -l"stdc++" -l"z" -framework "CoreGraphics" -framework "CoreTelephony" -framework "CoreText" -framework "CoreVideo" -framework "Foundation" -framework "Security" -framework "SystemConfiguration" -framework "TencentOpenAPI"
+OTHER_LDFLAGS = $(inherited) -ObjC -weak_library /usr/lib/libz.dylib -l"libsqlite3" -l"libiconv" -l"libstdc++" -l"libz" -framework "Security" -framework "SystemConfiguration" -framework "CoreGraphics" -framework "CoreTelephony" -framework "TencentOpenAPI"
 QQAPI_ROOT = ${SRCROOT}

@@ -1,6 +1,6 @@
 {
-  "name": "react-native-qq",
-  "version": "3.0.0",
+  "name": "react-native-qq-new",
+  "version": "3.0.1",
   "description": "QQ Login&Share support in React Native.",
   "main": "index.js",
   "scripts": {
@@ -8,17 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reactnativecn/react-native-qq.git"
+    "url": "git+https://github.com/qianshang/react-native-qq.git"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "author": "tdzl2003",
+  "author": "qianshang",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/reactnativecn/react-native-qq/issues"
-  },
-  "homepage": "https://github.com/reactnativecn/react-native-qq#readme"
+  "homepage": "https://github.com/qianshang/react-native-qq#readme"
 }
