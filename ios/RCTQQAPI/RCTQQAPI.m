@@ -79,10 +79,12 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(isQQInstalled:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
     if ([QQApiInterface isQQInstalled]) {
-        resolve(@[[NSNull null]]);
+        // resolve(@[[NSNull null]]);
+        resolve(@YES);
     }
     else {
-        reject(@"-1",INVOKE_FAILED,nil);
+        // reject(@"-1",INVOKE_FAILED,nil);
+        resolve(@NO);
     }
 }
 
