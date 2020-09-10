@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/qianshang/react-native-qq.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/RCTQQAPI/*.{h,m}"
+  s.ios.vendored_frameworks = 'ios/RCTQQAPI/TencentOpenAPI.framework'
 
   s.dependency 'React'
 end
